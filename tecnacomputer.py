@@ -17,7 +17,7 @@ wd = webdriver.Chrome(r'D:\UNSA\anios\IV\VIII_SEMESTRE\Empresarial\Prototipo\chr
 print ("*************************************************************************** \n")
 print("                     Comparando Precios ..... \n")
 
-print ("Connecting to Entel")
+print ("Connecting to Tiendas I shop")
 wd.get(source1)
 wd.implicitly_wait(wait_imp)
 f_price = wd.find_element_by_xpath( "/html/body/div[2]/main/div[2]/div/div[1]/div[2]/div/span[1]/span/span/span" )
@@ -25,7 +25,7 @@ pr_name = wd.find_element_by_xpath("/html/body/div[2]/main/div[2]/div/div[1]/div
 product = pr_name.text
 r_price = f_price.text
 # print (r_price[1:])
-print (" ---> Successfully retrieved the price from Entel \n")
+print (" ---> Escarbado! Precio en Tiendas I Shop \n")
 time.sleep(2)
 
 
@@ -37,7 +37,7 @@ wd.implicitly_wait(wait_imp)
 a_price = wd.find_element_by_xpath("/html/body/div[4]/div[2]/section[2]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div/span")
 raw_p = a_price.text
 # print (raw_p[2:8])
-print (" ---> Successfully retrieved the price from Entel \n")
+print (" ---> Escarbado! Precio en Entel \n")
 time.sleep(2)
 
 print("Conectando a Linio")
@@ -46,12 +46,12 @@ wd.implicitly_wait(wait_imp)
 c_price = wd.find_element_by_xpath("/html/body/div[3]/main/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/div[1]/div/span")
 raw_c = c_price.text
 # print (raw_c[1:7])
-print (" ---> Successfully retrieved the price from Linio\n")
+print (" ---> Escarbado! Precio en Linio\n")
 time.sleep(2)
 
 # Final display
 print ("#------------------------------------------------------------------------#")
 print ("Precios del Apple Iphone 12 64gb  PEN \n".format(product))
-print("Price available at Tiendas I Shop is: "+r_price[0:])
-print("  Price available at Entel is: "+raw_p[0:])
-print("   Price available at Linio is: "+raw_c[0:])
+print("Precio actual en Tiendas I Shop is: "+r_price[0:])
+print("  Precio actual en Entel is: "+raw_p[0:])
+print("   Precio actual en Linio is: "+raw_c[0:])
