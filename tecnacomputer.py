@@ -34,7 +34,7 @@ print("Connectando a Entel")
 wd.get(source2)
 wd.implicitly_wait(wait_imp)
 # a_price = wd.find_element_by_id("priceblock_ourprice")
-a_price = wd.find_element_by_xpath("/html/body/div[4]/div[2]/section[2]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div/span")
+a_price = wd.find_element_by_xpath("/html/body/div[4]/div[2]/section[2]/div[3]/div/div[2]/div[3]/div[1]/div[1]/div/span")
 raw_p = a_price.text
 # print (raw_p[2:8])
 print (" ---> Escarbado! Precio en Entel \n")
@@ -55,3 +55,6 @@ print ("Precios del Apple Iphone 12 64gb  PEN \n".format(product))
 print("Precio actual en Tiendas I Shop es: "+r_price[0:])
 print("  Precio actual en Entel es: "+raw_p[0:])
 print("   Precio actual en Linio es: "+raw_c[0:])
+
+# TIPO
+print(type(r_price[0:]))
